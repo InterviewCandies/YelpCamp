@@ -1,0 +1,9 @@
+<%- include("../partials/header.ejs") %>
+<form action="/camping/<%= camp_id %>/comment/<%= comment._id %>?_method=PUT" method="post" class="mx-auto w-50">
+    <h2 class="mb-3 text-center">Edit comment</h2>
+    <div class="form-group">
+        <input class="form-control" type="text" name="comment[content]" value="<%= comment.content %>">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+</form>
+<%- include("../partials/footer.ejs") %>
